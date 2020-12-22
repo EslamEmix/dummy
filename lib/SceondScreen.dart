@@ -45,7 +45,7 @@ class _SecondScreenState extends State<SecondScreen> {
             controller: _controller,
             aspectRatio: 16 / 9,
           ),
-          Image.asset('assets/images/monkey.jpg'),
+          Image.asset('assets/images/monkey.jpg',cacheWidth: 392,cacheHeight: 261,),
           myName(),
           Text(_counter.toString()),
           RaisedButton(child: Text("Next"),

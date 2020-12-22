@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'SceondScreen.dart';
+import 'model/Person.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -8,8 +9,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+
+
   @override
   Widget build(BuildContext context) {
+    createPersons();
     return Material(
       child: Scaffold(
         appBar: AppBar(title: Text("For Dummies App"),),
@@ -27,5 +32,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+
+
+  void createPersons() {
+    List<Person> p = [];
+    for (var i = 0; i < 50; ++i) {
+      if(i == 5)
+        p.add(Person());
+
+      p.add(Person(age:i,name: "Eslam Mohamed$i"));
+    }
   }
 }

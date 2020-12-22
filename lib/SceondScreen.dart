@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app8/DmmyStack.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'dart:developer' as developer;
 
@@ -26,7 +27,7 @@ class _SecondScreenState extends State<SecondScreen> {
   void _incrementCounter() {
     developer.log("Eslam Mohamed", name: "Ess", error: "increment");
     developer.debugger(when: _counter > 5, message: "counter greater than 5");
-    developer.inspect(MyName);
+    //developer.inspect(myName);
     setState(() {
       _counter++;
     });
@@ -45,8 +46,12 @@ class _SecondScreenState extends State<SecondScreen> {
             aspectRatio: 16 / 9,
           ),
           Image.asset('assets/images/monkey.jpg'),
-          MyName(),
+          myName(),
           Text(_counter.toString()),
+          RaisedButton(child: Text("Next"),
+            onPressed: ()=>Navigator.of(context).push(
+                MaterialPageRoute(builder: (context)=>DummyStack())
+            ),),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -57,7 +62,7 @@ class _SecondScreenState extends State<SecondScreen> {
     );
   }
 
-  Text MyName() => Text("Counter Mohamed");
+  Text myName() => Text("Counter Mohamed");
 
   @override
   void dispose() {

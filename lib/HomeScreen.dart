@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Text("Welcome To Dummy App"),
             RaisedButton(child: Text("Next"),
             onPressed: ()=>Navigator.of(context).push(
-              MaterialPageRoute(builder: (context)=>SecondScreen())
+              MaterialPageRoute(builder: (context)=>SecondScreen(title: "Dummy",))
             ),),
             Image.asset('assets/images/dummy.jpg'),
             Image.asset('assets/images/dummy.jpg'),

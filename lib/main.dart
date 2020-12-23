@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app8/HomeScreen.dart';
+import 'package:flutter_app8/LargeImageScreen.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'dart:developer' as developer;
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomeScreen(),
+      //home: LargeImageScreen(),
     );
   }
 }

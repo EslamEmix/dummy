@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     createPersons();
     return Material(
       child: Scaffold(
+        drawer: Drawer(),
         appBar: AppBar(title: Text("For Dummies App"),),
         body: Column(
           children: [
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: ()=>Navigator.of(context).push(
               MaterialPageRoute(builder: (context)=>SecondScreen(title: "Dummy",))
             ),),
-            Image.asset('assets/images/dummy.jpg'),
+            Image.asset('assets/images/dummy.jpg',cacheHeight: 484,cacheWidth: 392,),
             Image.asset('assets/images/dummy.jpg'),
 
           ],
